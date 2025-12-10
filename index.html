@@ -19,11 +19,16 @@
         IMÁGENES ESPERADAS EN LA MISMA CARPETA QUE index.html
 
         home.jpg                 → Imagen grande de portada (hero)
+        anillo.jpg               → Imagen en la sección "¿Por qué San Vicente...?"
+
         1.jpg  - 4.jpg           → Hoteles en San Vicente
         5.jpg  - 7.jpg           → Hoteles en los alrededores
         8.jpg  - 15.jpg          → Restaurantes recomendaciones
 
-        Puedes cambiar los nombres en los <img> si prefieres otra numeración :)
+        tardeo.jpg               → Preboda - Tardeo de Bienvenida
+        iglesia.jpg              → Ceremonia
+        finca.jpg                → Celebración
+        comillas.jpg             → Fiestas de Comillas
       */
 
       body {
@@ -115,16 +120,15 @@
         position: relative;
       }
 
-    .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(245, 241, 232, 0.4),
-    rgba(245, 241, 232, 0.7)
-  );
-}
-
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(245, 241, 232, 0.55),
+          rgba(245, 241, 232, 0.85)
+        );
+      }
 
       @view-transition {
         navigation: auto;
@@ -170,6 +174,11 @@
             href="#rsvp"
             class="nav-link px-6 py-2 rounded-sm font-semibold transition-all"
             >✉️ RSVP</a
+          >
+          <a
+            href="#playlist"
+            class="nav-link px-6 py-2 rounded-sm font-semibold transition-all"
+            >🎵 Playlist</a
           >
         </div>
       </nav>
@@ -257,47 +266,41 @@
                   border: 3px solid #d4c5a9;
                 "
               >
-             <div
-  id="story-text"
-  class="text-lg leading-relaxed text-center"
-  style="color: #5d4e37"
->
+                <div
+                  id="story-text"
+                  class="text-lg leading-relaxed text-center"
+                  style="color: #5d4e37"
+                >
+                  <p class="mb-4">San Vicente es un lugar muy especial para nosotros.</p>
+                  <p class="mb-4">
+                    Para Nuki, porque aquí empiezan sus raíces: su bisabuela nació en
+                    este pueblo y cada rincón guarda una historia familiar. Creció
+                    escuchándolas, y San Vicente siempre ha sido parte de quién es.
+                  </p>
+                  <p class="mb-4">
+                    Para Chuchi, que llegó sin conocer el norte, San Vicente fue un
+                    descubrimiento que llegó de la mano de Nuki. Con los años, él
+                    también ha ido creando su propio vínculo con este lugar: sus
+                    playas, sus "praos", sus restaurantes, sus fiestas… y, sobre todo,
+                    su gente.
+                  </p>
+                  <p>
+                    Por eso queríamos casarnos aquí: porque es un sitio lleno de
+                    significado para los dos, donde queremos seguir sumando momentos,
+                    historias y recuerdos. Y estamos seguros de que, a los que aún no
+                    habéis caído rendidos a su encanto, San Vicente también os robará
+                    un trocito de corazón.
+                  </p>
+                </div>
 
-  <p class="mb-4">San Vicente es un lugar muy especial para nosotros.</p>
-
-  <p class="mb-4">
-    Para Nuki, porque aquí empiezan sus raíces: su bisabuela nació en
-    este pueblo y cada rincón guarda una historia familiar. Creció
-    escuchándolas, y San Vicente siempre ha sido parte de quién es.
-  </p>
-
-  <p class="mb-4">
-    Para Chuchi, que llegó sin conocer el norte, San Vicente fue un
-    descubrimiento que llegó de la mano de Nuki. Con los años, él
-    también ha ido creando su propio vínculo con este lugar: sus
-    playas, sus "praos", sus restaurantes, sus fiestas… y, sobre todo,
-    su gente.
-  </p>
-
-  <p>
-    Por eso queríamos casarnos aquí: porque es un sitio lleno de
-    significado para los dos, donde queremos seguir sumando momentos,
-    historias y recuerdos. Y estamos seguros de que, a los que aún no
-    habéis caído rendidos a su encanto, San Vicente también os robará
-    un trocito de corazón.
-  </p>
-
-  <!-- Imagen anillo debajo del texto -->
-  <div class="w-full flex justify-center mt-8">
-    <img 
-      src="anillo.jpg" 
-      alt="anillo" 
-      class="w-1/2 rounded-lg shadow-md object-cover"
-    />
-  </div>
-
-</div>
-
+                <!-- Imagen anillo -->
+                <div class="mt-8 flex justify-center">
+                  <img
+                    src="anillo.jpg"
+                    alt="Anillo de compromiso"
+                    class="w-1/2 max-w-md rounded-lg shadow-md object-cover"
+                  />
+                </div>
               </div>
             </div>
           </section>
@@ -691,6 +694,15 @@
                           >
                             Yepah! Bar (San Vicente de la Barquera)
                           </p>
+
+                          <!-- Imagen Tardeo -->
+                          <div class="mt-4 flex justify-center">
+                            <img
+                              src="tardeo.jpg"
+                              alt="Tardeo de bienvenida"
+                              class="w-2/3 max-w-md rounded-lg shadow-md object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -814,6 +826,15 @@
                             Recomendamos aparcar en el CEIP Mata Linares (~400
                             m)
                           </p>
+
+                          <!-- Imagen Ceremonia -->
+                          <div class="mt-4 flex justify-center">
+                            <img
+                              src="iglesia.jpg"
+                              alt="Iglesia de la ceremonia"
+                              class="w-2/3 max-w-md rounded-lg shadow-md object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -862,6 +883,15 @@
                             Finca Casería de la Mar. Habrá transporte de vuelta
                             a Comillas/San Vicente.
                           </p>
+
+                          <!-- Imagen Celebración -->
+                          <div class="mt-4 flex justify-center">
+                            <img
+                              src="finca.jpg"
+                              alt="Finca de celebración"
+                              class="w-2/3 max-w-md rounded-lg shadow-md object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -954,6 +984,15 @@
                             Los que aún tengan energía... pueden pasarse por las
                             fiestas de Comillas!
                           </p>
+
+                          <!-- Imagen Fiestas de Comillas -->
+                          <div class="mt-4 flex justify-center">
+                            <img
+                              src="comillas.jpg"
+                              alt="Fiestas de Comillas"
+                              class="w-2/3 max-w-md rounded-lg shadow-md object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1925,6 +1964,42 @@
                   </p>
                   <p>Nos vemos en la boda 🌿</p>
                 </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- PLAYLIST SECTION -->
+        <div id="playlist">
+          <section
+            class="py-20 w-full"
+            style="background-color: #f5f1e8"
+          >
+            <div class="max-w-3xl mx-auto px-4">
+              <h2
+                class="font-playfair text-4xl md:text-5xl text-center mb-8 leaf-decoration inline-block w-full"
+                style="color: #654321"
+              >
+                🎵 Playlist
+              </h2>
+              <p
+                class="text-center mb-8"
+                style="color: #5d4e37"
+              >
+                Para ir calentando motores antes de Cantabria… 💃🕺
+              </p>
+
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  style="border-radius:12px"
+                  src="https://open.spotify.com/embed/playlist/26Dkuy9dbtJryud63qZOen?utm_source=generator"
+                  width="100%"
+                  height="352"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
           </section>
