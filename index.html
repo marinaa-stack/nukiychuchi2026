@@ -31,8 +31,15 @@
         comillas.jpg             → Fiestas de Comillas
       */
 
+      html,
       body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
         box-sizing: border-box;
+      }
+
+      body {
         font-family: "Lato", sans-serif;
       }
 
@@ -96,6 +103,30 @@
         transform: translateY(-2px);
       }
 
+      /* Hero con imagen de fondo */
+      .hero-bg {
+        background-image: url("home.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(245, 241, 232, 0.55),
+          rgba(245, 241, 232, 0.85)
+        );
+      }
+
+      @view-transition {
+        navigation: auto;
+      }
+
+      /* Ajustes móviles (barra de menú y footer más estrechos y compactos) */
       @media (max-width: 768px) {
         .leaf-decoration::before,
         .leaf-decoration::after {
@@ -109,30 +140,38 @@
         .leaf-decoration::after {
           right: -2rem;
         }
-      }
 
-      /* Hero con imagen de fondo */
-      .hero-bg {
-        background-image: url("home.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-      }
+        nav {
+          padding-top: 0.4rem !important;
+          padding-bottom: 0.4rem !important;
+          padding-left: 0.5rem !important;
+          padding-right: 0.5rem !important;
+          width: 100%;
+        }
 
-   .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(245, 241, 232, 0.4),
-    rgba(245, 241, 232, 0.7)
-  );
-}
+        nav > div {
+          gap: 0.35rem;
+        }
 
+        .nav-link {
+          padding: 0.35rem 0.7rem;
+          font-size: 0.8rem;
+        }
 
-      @view-transition {
-        navigation: auto;
+        footer {
+          padding-top: 0.6rem !important;
+          padding-bottom: 0.6rem !important;
+          width: 100%;
+        }
+
+        footer svg {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+
+        footer p {
+          margin-bottom: 0.15rem;
+        }
       }
     </style>
   </head>
@@ -1280,7 +1319,7 @@
               >
                 🍽️ Nuestras Recomendaciones para Comer
               </h2>
-              <p
+            <p
                 class="text-center text-lg mb-16 max-w-3xl mx-auto italic"
                 style="color: #5d4e37"
               >
