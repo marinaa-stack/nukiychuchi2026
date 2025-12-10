@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Cantabria</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- (Opcional) Google Fonts, por si quieres usar otras en el futuro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    >
+
+    <style>
+      @font-face {
+        font-family: 'AC Real Adult';
+        src: url('https://db.onlinewebfonts.com/t/d4e6c02d8d285e84789c3ecc949fbb4f.eot');
+        src: url('https://db.onlinewebfonts.com/t/d4e6c02d8d285e84789c3ecc949fbb4f.eot?#iefix') format('embedded-opentype'),
+             url('https://db.onlinewebfonts.com/t/d4e6c02d8d285e84789c3ecc949fbb4f.woff2') format('woff2'),
+             url('https://db.onlinewebfonts.com/t/d4e6c02d8d285e84789c3ecc949fbb4f.woff') format('woff'),
+             url('https://db.onlinewebfonts.com/t/d4e6c02d8d285e84789c3ecc949fbb4f.ttf') format('truetype'),
+             url('https://db.onlinewebfonts.com/t/d4e6c02d8d285e84789c3ecc949fbb4f.svg#AC Real Adult') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        box-sizing: border-box;
+        font-family: 'AC Real Adult', cursive;
+      }
+
+      .font-playfair {
+        font-family: 'AC Real Adult', cursive;
+      }
+
+      .wood-texture {
+        background-image:
+          linear-gradient(rgba(139, 101, 62, 0.1), rgba(139, 101, 62, 0.1)),
+          repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(101, 67, 33, 0.1) 2px, rgba(101, 67, 33, 0.1) 4px);
+      }
+
+      .leaf-decoration {
+        position: relative;
+      }
+
+      .leaf-decoration::before,
+      .leaf-decoration::after {
+        content: '🌿';
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.6;
+      }
+
+      .leaf-decoration::before {
+        left: -3rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(-20deg);
+      }
+
+      .leaf-decoration::after {
+        right: -3rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(20deg);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        transition: all 0.3s ease;
+        background-color: #8b7355;
+        color: white;
+      }
+
+      .nav-link.active {
+        background-color: #8b6f47;
+      }
+
+      .nav-link:hover {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .leaf-decoration::before,
+        .leaf-decoration::after {
+          font-size: 1.5rem;
+        }
+
+        .leaf-decoration::before {
+          left: -2rem;
+        }
+
+        .leaf-decoration::after {
+          right: -2rem;
+        }
+      }
+
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+  </head>
+  <body class="h-full">
+    <div id="app" class="w-full h-full flex flex-col">
+      <!-- Navigation -->
+      <nav class="w-full py-4 px-4 shadow-md wood-texture sticky top-0 z-50" style="background-color: #faf8f3;">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-4">
+          <a href="#home" class="nav-link px-6 py-2 rounded-sm font-semibold transition-all" style="background-color: #8b7355; color: white;"> 🏡 Inicio </a>
+          <a href="#itinerary" class="nav-link px-6 py-2 rounded-sm font-semibold transition-all" style="background-color: #8b7355; color: white;"> 📅 Itinerario </a>
+          <a href="#accommodation" class="nav-link px-6 py-2 rounded-sm font-semibold transition-all" style="background-color: #8b7355; color: white;"> 🏨 Alojamiento </a>
+          <a href="#recommendations" class="nav-link px-6 py-2 rounded-sm font-semibold transition-all" style="background-color: #8b7355; color: white;"> 🍽️ Recomendaciones </a>
+          <a href="#gifts" class="nav-link px-6 py-2 rounded-sm font-semibold transition-all" style="background-color: #8b7355; color: white;"> 🎁 Regalo </a>
+          <a href="#rsvp" class="nav-link px-6 py-2 rounded-sm font-semibold transition-all" style="background-color: #8b7355; color: white;"> ✉️ RSVP </a>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <div class="flex-1 overflow-auto w-full">
+        <!-- HOME PAGE -->
+        <div id="home">
+          <!-- Hero Section -->
+          <section class="min-h-screen flex items-center justify-center relative w-full">
+            <div class="absolute inset-0 w-full h-full">
+              <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="wood-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <rect width="100" height="100" fill="#f5f1e8" />
+                    <path d="M0,20 Q25,15 50,20 T100,20" stroke="#d4c5a9" stroke-width="0.5" fill="none" opacity="0.3" />
+                    <path d="M0,40 Q25,35 50,40 T100,40" stroke="#d4c5a9" stroke-width="0.5" fill="none" opacity="0.2" />
+                    <path d="M0,60 Q25,55 50,60 T100,60" stroke="#d4c5a9" stroke-width="0.5" fill="none" opacity="0.3" />
+                    <path d="M0,80 Q25,75 50,80 T100,80" stroke="#d4c5a9" stroke-width="0.5" fill="none" opacity="0.2" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#wood-pattern)" />
+              </svg>
+            </div>
+            <div class="text-center z-10 px-4 relative">
+              <div class="mb-8">
+                <svg class="w-24 h-24 mx-auto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50,30 Q40,20 30,25 Q20,30 25,40 Q30,50 50,70 Q70,50 75,40 Q80,30 70,25 Q60,20 50,30 Z" fill="#8b7355" opacity="0.7" />
+                  <circle cx="35" cy="35" r="3" fill="#654321" />
+                  <circle cx="65" cy="35" r="3" fill="#654321" />
+                  <path d="M45,50 Q50,55 55,50" stroke="#654321" stroke-width="2" fill="none" />
+                </svg>
+              </div>
+              <div class="leaf-decoration inline-block">
+                <h1 id="names" class="text-6xl md:text-8xl mb-4" style="color: #654321; font-family: 'AC Real Adult', cursive;">nuki y chuchi</h1>
+              </div>
+              <div class="flex items-center justify-center gap-4 mb-8">
+                <div class="h-px bg-gradient-to-r from-transparent via-amber-700 to-transparent w-16"></div>
+                <span class="text-2xl">🌾</span>
+                <div class="h-px bg-gradient-to-r from-transparent via-amber-700 to-transparent w-16"></div>
+              </div>
+              <p id="date" class="font-playfair text-2xl md:text-3xl mb-12" style="color: #8b7355;">18 de Julio, 2026</p>
+              <a href="#itinerary" class="nav-link inline-block px-8 py-4 text-white font-semibold rounded-sm transition-all duration-300 cursor-pointer" style="background-color: #8b6f47;"> Ver Itinerario </a>
+            </div>
+          </section>
+
+          <!-- Story Section -->
+          <section class="py-20 w-full" style="background-color: #ffffff;">
+            <div class="max-w-4xl mx-auto px-4">
+              <h2 id="story-title" class="font-playfair text-5xl text-center mb-12 leaf-decoration inline-block w-full" style="color: #654321;">¿Por qué San Vicente de la Barquera?</h2>
+              <div class="p-10 rounded-lg shadow-xl wood-texture" style="background-color: #faf8f3; border: 3px solid #d4c5a9;">
+                <div id="story-text" class="text-lg leading-relaxed" style="color: #5d4e37;">
+                  <p class="mb-4">San Vicente es un lugar muy especial para nosotros.</p>
+                  <p class="mb-4">Para Nuki, porque aquí empiezan sus raíces: su bisabuela nació en este pueblo y cada rincón guarda una historia familiar. Creció escuchándolas, y San Vicente siempre ha sido parte de quién es.</p>
+                  <p class="mb-4">Para Chuchi, que llegó sin conocer el norte, San Vicente fue un descubrimiento que llegó de la mano de Nuki. Con los años, él también ha ido creando su propio vínculo con este lugar: sus playas, sus "praos", sus restaurantes, sus fiestas… y, sobre todo, su gente.</p>
+                  <p>Por eso queríamos casarnos aquí: porque es un sitio lleno de significado para los dos, donde queremos seguir sumando momentos, historias y recuerdos. Y estamos seguros de que, a los que aún no habéis caído rendidos a su encanto, San Vicente también os robará un trocito de corazón.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- RSVP Section on Home -->
+          <section class="py-20 w-full" style="background-color: #f5f1e8;">
+            <div class="max-w-2xl mx-auto px-4">
+              <h2 class="font-playfair text-5xl text-center mb-12 leaf-decoration inline-block w-full rsvp-title" style="color: #654321;">Confirma tu Asistencia</h2>
+              <div class="p-10 rounded-lg shadow-xl wood-texture" style="background-color: #ffffff; border: 3px solid #d4c5a9;">
+                <p class="text-center mb-8" style="color: #5d4e37;">Por favor, confirma tu asistencia antes del <strong class="rsvp-deadline">1 de Mayo, 2026</strong></p>
+                <form id="rsvp-form-home" class="space-y-6">
+                  <div>
+                    <label for="guest-name-home" class="block mb-2 font-semibold" style="color: #654321;">Nombre y apellidos *</label>
+                    <input type="text" id="guest-name-home" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="Tu nombre completo">
+                  </div>
+                  <div>
+                    <label for="guest-email-home" class="block mb-2 font-semibold" style="color: #654321;">Email *</label>
+                    <input type="email" id="guest-email-home" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="tu@email.com">
+                  </div>
+                  <div>
+                    <label for="guest-phone-home" class="block mb-2 font-semibold" style="color: #654321;">Teléfono *</label>
+                    <input type="tel" id="guest-phone-home" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="+34 600 000 000">
+                  </div>
+                  <div>
+                    <label for="guest-address-home" class="block mb-2 font-semibold" style="color: #654321;">Dirección del invitado *</label>
+                    <textarea id="guest-address-home" rows="2" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors resize-none" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="Calle, número, código postal, ciudad"></textarea>
+                  </div>
+                  <div>
+                    <label for="guest-attending-home" class="block mb-2 font-semibold" style="color: #654321;">¿Asistirás? *</label>
+                    <select id="guest-attending-home" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;">
+                      <option value="">Selecciona una opción</option>
+                      <option value="yes">Sí</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div id="additional-fields-home" class="hidden space-y-6">
+                    <div>
+                      <label for="with-companion-home" class="block mb-2 font-semibold" style="color: #654321;">¿Vendrás con acompañante? *</label>
+                      <select id="with-companion-home" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                    <div id="companion-name-container-home" class="hidden">
+                      <label for="companion-name-home" class="block mb-2 font-semibold" style="color: #654321;">Nombre y apellidos del acompañante *</label>
+                      <input type="text" id="companion-name-home" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="Nombre completo del acompañante">
+                    </div>
+                    <div>
+                      <label for="pre-wedding-home" class="block mb-2 font-semibold" style="color: #654321;">¿Vienes a la preboda? *</label>
+                      <select id="pre-wedding-home" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="accommodation-location-home" class="block mb-2 font-semibold" style="color: #654321;">¿Dónde os alojaréis? *</label>
+                      <select id="accommodation-location-home" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="comillas">Comillas</option>
+                        <option value="san-vicente">San Vicente</option>
+                        <option value="other">Otro</option>
+                      </select>
+                    </div>
+                    <div id="accommodation-other-container-home" class="hidden">
+                      <label for="accommodation-other-home" class="block mb-2 font-semibold" style="color: #654321;">Especifica dónde *</label>
+                      <input type="text" id="accommodation-other-home" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="Indica el lugar de alojamiento">
+                    </div>
+                    <div>
+                      <label for="dietary-requirements-home" class="block mb-2 font-semibold" style="color: #654321;">Intolerancias / alergias / preferencias</label>
+                      <textarea id="dietary-requirements-home" rows="3" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors resize-none" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="Vegetariano, celíaco, alérgico a..."></textarea>
+                    </div>
+                    <div>
+                      <label for="transport-needed-home" class="block mb-2 font-semibold" style="color: #654321;">¿Necesitas transporte (autobús) el día de la boda de la iglesia a la finca/de la finca a San Vicente/Comillas? *</label>
+                      <select id="transport-needed-home" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #faf8f3;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="guest-message-home" class="block mb-2 font-semibold" style="color: #654321;">Mensaje para los novios (opcional)</label>
+                    <textarea id="guest-message-home" rows="4" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors resize-none" style="border-color: #d4c5a9; background-color: #faf8f3;" placeholder="Déjanos un mensaje..."></textarea>
+                  </div>
+                  <button type="submit" class="w-full py-4 text-white font-semibold rounded-sm transition-all duration-300 hover:scale-105" style="background-color: #8b6f47;"> Enviar Confirmación </button>
+                </form>
+                <div id="success-message-home" class="hidden mt-6 p-6 rounded text-center" style="background-color: #d4edda; color: #155724; border: 2px solid #c3e6cb;">
+                  <div class="text-4xl mb-3">✓</div>
+                  <p class="text-lg font-semibold mb-2">¡Gracias por confirmar!</p>
+                  <p>Nos vemos en la boda 🌿</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ITINERARY PAGE -->
+        <div id="itinerary">
+          <section class="py-20 w-full min-h-screen" style="background-color: #f5f1e8;">
+            <div class="max-w-7xl mx-auto px-4">
+              <h2 id="itinerary-title" class="font-playfair text-5xl text-center mb-16 leaf-decoration inline-block w-full" style="color: #654321;">Itinerario del Día</h2>
+              <!-- Two Column Layout -->
+              <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- LEFT COLUMN - PREBODA -->
+                <div>
+                  <div class="text-center mb-8">
+                    <h3 class="font-playfair text-3xl mb-2" style="color: #654321;">🌿 Preboda</h3>
+                    <p class="text-lg" style="color: #8b7355;">Viernes 17 de Julio</p>
+                  </div>
+                  <div class="space-y-8">
+                    <!-- Preboda Item 1 -->
+                    <div class="flex gap-4">
+                      <div class="flex-shrink-0 w-20 text-right">
+                        <div class="font-playfair text-xl font-bold" style="color: #654321;">
+                          20:00h
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div class="w-4 h-4 rounded-full mt-1" style="background-color: #8b6f47;"></div>
+                        <div class="w-1 h-full ml-1.5" style="background-color: #d4c5a9;"></div>
+                      </div>
+                      <div class="flex-1 pb-8">
+                        <div class="p-5 rounded-lg shadow-lg wood-texture" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                          <h4 class="font-playfair text-xl mb-2" style="color: #654321;">🍹 Tardeo de Bienvenida</h4>
+                          <p style="color: #5d4e37;" class="text-sm">Yepah! Bar (San Vicente de la Barquera)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Preboda Item 2 -->
+                    <div class="flex gap-4">
+                      <div class="flex-shrink-0 w-20 text-right">
+                        <div class="font-playfair text-xl font-bold" style="color: #654321;">
+                          22:30h
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div class="w-4 h-4 rounded-full mt-1" style="background-color: #8b6f47;"></div>
+                      </div>
+                      <div class="flex-1 pb-8">
+                        <div class="p-5 rounded-lg shadow-lg wood-texture" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                          <h4 class="font-playfair text-xl mb-2" style="color: #654321;">🎉 Fiestas de San Vicente</h4>
+                          <p style="color: #5d4e37;" class="text-sm">Os recomendamos iros a la cama a descansar pero no podemos culpar a los que no puedan resistirse a una corta visita por las fiestas de Sanvi!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RIGHT COLUMN - BODA -->
+                <div>
+                  <div class="text-center mb-8">
+                    <h3 class="font-playfair text-3xl mb-2" style="color: #654321;">💒 Día de la Boda</h3>
+                    <p class="text-lg" style="color: #8b7355;">Sábado 18 de Julio</p>
+                  </div>
+                  <div class="space-y-8">
+                    <!-- Wedding Item 1 -->
+                    <div class="flex gap-4">
+                      <div class="flex-shrink-0 w-20 text-right">
+                        <div class="font-playfair text-xl font-bold" style="color: #654321;" id="ceremony-time-display">
+                          12:00h
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div class="w-4 h-4 rounded-full mt-1" style="background-color: #8b6f47;"></div>
+                        <div class="w-1 h-full ml-1.5" style="background-color: #d4c5a9;"></div>
+                      </div>
+                      <div class="flex-1 pb-8">
+                        <div class="p-5 rounded-lg shadow-lg wood-texture" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                          <h4 id="ceremony-title" class="font-playfair text-xl mb-2" style="color: #654321;">🌸 Ceremonia</h4>
+                          <p style="color: #5d4e37;" class="text-sm mb-1"><strong>Lugar:</strong> <span id="venue-name">Iglesia Santa María de los Ángeles</span></p>
+                          <p style="color: #5d4e37;" class="text-sm"><span id="venue-address">San Vicente de la Barquera, Cantabria</span></p>
+                          <p id="ceremony-desc" style="color: #5d4e37;" class="mt-2 text-sm">Recomendamos aparcar en el CEIP Mata Linares (~400 m)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Wedding Item 2 -->
+                    <div class="flex gap-4">
+                      <div class="flex-shrink-0 w-20 text-right">
+                        <div id="cocktail-time" class="font-playfair text-xl font-bold" style="color: #654321;">
+                          13:30h
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div class="w-4 h-4 rounded-full mt-1" style="background-color: #8b6f47;"></div>
+                        <div class="w-1 h-full ml-1.5" style="background-color: #d4c5a9;"></div>
+                      </div>
+                      <div class="flex-1 pb-8">
+                        <div class="p-5 rounded-lg shadow-lg wood-texture" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                          <h4 id="cocktail-title" class="font-playfair text-xl mb-2" style="color: #654321;">🎊 Celebración</h4>
+                          <p id="cocktail-desc" style="color: #5d4e37;" class="text-sm">Finca Casería de la Mar. Habrá transporte de vuelta a Comillas/San Vicente.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Wedding Item 3 -->
+                    <div class="flex gap-4">
+                      <div class="flex-shrink-0 w-20 text-right">
+                        <div id="dinner-time" class="font-playfair text-xl font-bold" style="color: #654321;">
+                          01:00h
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div class="w-4 h-4 rounded-full mt-1" style="background-color: #8b6f47;"></div>
+                        <div class="w-1 h-full ml-1.5" style="background-color: #d4c5a9;"></div>
+                      </div>
+                      <div class="flex-1 pb-8">
+                        <div class="p-5 rounded-lg shadow-lg wood-texture" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                          <h4 id="dinner-title" class="font-playfair text-xl mb-2" style="color: #654321;">🚌 Transporte de Vuelta</h4>
+                          <p id="dinner-desc" style="color: #5d4e37;" class="text-sm">Habrá transporte de vuelta desde la finca a Comillas/San Vicente.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Wedding Item 4 -->
+                    <div class="flex gap-4">
+                      <div class="flex-shrink-0 w-20 text-right">
+                        <div id="party-time" class="font-playfair text-xl font-bold" style="color: #654321;">
+                          01:30h
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div class="w-4 h-4 rounded-full mt-1" style="background-color: #8b6f47;"></div>
+                      </div>
+                      <div class="flex-1 pb-8">
+                        <div class="p-5 rounded-lg shadow-lg wood-texture" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                          <h4 id="party-title" class="font-playfair text-xl mb-2" style="color: #654321;">🎉 Fiestas de Comillas</h4>
+                          <p id="party-desc" style="color: #5d4e37;" class="text-sm">Los que aún tengan energía... pueden pasarse por las fiestas de Comillas!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ACCOMMODATION PAGE -->
+        <div id="accommodation">
+          <section class="py-20 w-full min-h-screen" style="background-color: #ffffff;">
+            <div class="max-w-6xl mx-auto px-4">
+              <h2 id="accommodation-title" class="font-playfair text-5xl text-center mb-16 leaf-decoration inline-block w-full" style="color: #654321;">Alojamiento</h2>
+              <p id="accommodation-intro" class="text-center text-lg mb-12 max-w-3xl mx-auto" style="color: #5d4e37;">Hemos seleccionado algunos hoteles recomendados en la zona. Todos están cerca de la finca y ofrecen el encanto tradicional cántabro.</p>
+              <div class="mb-12">
+                <h3 class="font-playfair text-3xl text-center mb-8" style="color: #654321;">🛏️ Hoteles en San Vicente de la Barquera</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                  <!-- Hotel 1 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">🏡</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Hospedería Las Calzadas</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Alojamiento rural en pleno Parque Natural de Oyambre, tranquilo y rodeado de naturaleza.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Calle Las Calzadas 52, 39540 San Vicente de la Barquera, Cantabria</p>
+                    </div>
+                  </div>
+                  <!-- Hotel 2 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">🏨</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Hotel Luzón</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Hotel céntrico junto al mar, de ambiente familiar; habitaciones sencillas y algunas con vistas a la ría.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Avenida Miramar 1, 39540 San Vicente de la Barquera, Cantabria</p>
+                    </div>
+                  </div>
+                  <!-- Hotel 3 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">⚓</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Hotel Faro de San Vicente</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Hotel muy bien ubicado junto al puerto, con vistas a la ría y acceso fácil al casco histórico.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Calle Fuente Nueva 1, 39540 San Vicente de la Barquera, Cantabria</p>
+                    </div>
+                  </div>
+                  <!-- Hotel 4 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">🌊</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Hotel Azul de Galimar</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Hotel moderno y acogedor con jardín y vistas al estuario; muy tranquilo y con buena limpieza.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Camino Alto Santiago 11, 39540 San Vicente de la Barquera, Cantabria</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="font-playfair text-3xl text-center mb-8" style="color: #654321;">🏨 Hoteles en los Alrededores</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <!-- Hotel 5 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">🏖️</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Hotel Gerra Mayor</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Hotel rural situado cerca de las playas de Gerra; ambiente tranquilo, rodeado de naturaleza.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Zona de Gerra, San Vicente de la Barquera (Cantabria)</p>
+                    </div>
+                  </div>
+                  <!-- Hotel 6 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">🌳</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Hotel Los Jardines de Carrejo</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Hotel con encanto en un caserón cántabro restaurado, rodeado de jardines; ideal para desconectar en un entorno natural.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Barrio de Carrejo, 39500 Cabezón de la Sal, Cantabria</p>
+                    </div>
+                  </div>
+                  <!-- Hotel 7 -->
+                  <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                    <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                      <span class="text-7xl">🏰</span>
+                    </div>
+                    <div class="p-6" style="background-color: #faf8f3;">
+                      <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Palacio de Caranceja</h4>
+                      <p style="color: #5d4e37;" class="mb-4">Hotel boutique situado en un palacio cántabro del siglo XVII; elegante, tranquilo y con mucho carácter.</p>
+                      <p style="color: #5d4e37;" class="text-sm">📍 Barrio Caranceja 33, 39592 Reocín, Cantabria</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-12 p-8 rounded-lg shadow-lg wood-texture max-w-2xl mx-auto" style="background-color: #faf8f3; border: 2px solid #d4c5a9;">
+                <h3 class="font-playfair text-2xl mb-4 text-center" style="color: #654321;">💡 Consejo</h3>
+                <p id="accommodation-tip" style="color: #5d4e37;" class="text-center">Te recomendamos reservar con antelación, especialmente si vienes en temporada alta. ¡Santillana del Mar es un destino muy popular!</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- RECOMMENDATIONS PAGE -->
+        <div id="recommendations">
+          <section class="py-20 w-full min-h-screen" style="background-color: #f5f1e8;">
+            <div class="max-w-6xl mx-auto px-4">
+              <h2 class="font-playfair text-5xl text-center mb-8 leaf-decoration inline-block w-full" style="color: #654321;">🍽️ Nuestras Recomendaciones para Comer</h2>
+              <p class="text-center text-lg mb-16 max-w-3xl mx-auto italic" style="color: #5d4e37;">(o como sobrevivir felices y bien alimentados en Cantabria)</p>
+              <div class="grid md:grid-cols-2 gap-8">
+                <!-- Restaurante 1 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🐟</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Boga-Boga</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Si os gusta el pescado tanto como a nosotros, este sitio es apuesta segura. Aquí todo sabe a mar del bueno. ¡La marmita es pura felicidad!</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Plaza Mayor del Fuero 10, San Vicente de la Barquera</p>
+                  </div>
+                </div>
+                <!-- Restaurante 2 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🏛️</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Los Arcos</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Un clásico de paseo por San Vicente. Hemos venido más de una vez cuando no queríamos complicarnos: buen pescado, buen ambiente y sales contento.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Avenida de los Soportales 11, San Vicente de la Barquera</p>
+                  </div>
+                </div>
+                <!-- Restaurante 3 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🍚</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Las Redes</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Aquí hemos comido algunos de nuestros mejores arroces y mariscos. Es de esos sitios donde siempre aciertas.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Avenida de los Soportales 24, San Vicente de la Barquera</p>
+                  </div>
+                </div>
+                <!-- Restaurante 4 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🎣</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">El Pescador</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Otro de esos restaurantes "de toda la vida". Si os apetece pescado fresco y estáis por el centro, este es un buen plan.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Avenida de los Soportales, San Vicente de la Barquera</p>
+                  </div>
+                </div>
+                <!-- Restaurante 5 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🦪</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">La Ostrería</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Nos encanta venir aquí para darnos un homenaje de marisco. Ostras, zamburiñas, todo rico. Además suele tener muy buen ambiente.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Paseo de la Barquera, San Vicente de la Barquera</p>
+                  </div>
+                </div>
+                <!-- Restaurante 6 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🏖️</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">Chiringuito de Merón</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Nuestro sitio favorito para ambiente playero total. Y ojo: las costillas están brutales, de verdad. Id con hambre.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Playa de Merón, San Vicente de la Barquera</p>
+                  </div>
+                </div>
+                <!-- Restaurante 7 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                    <span class="text-7xl">🥩</span>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">La Parrilla de Prellezo</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Para los amantes de la brasa. Carne, pescado, raciones generosas… aquí nadie se queda con hambre. A nosotros nos encanta.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Carretera General, Prellezo</p>
+                  </div>
+                </div>
+                <!-- Restaurante 8 -->
+                <div class="rounded-lg shadow-xl overflow-hidden wood-texture" style="border: 3px solid #d4c5a9;">
+                  <div class="h-48 flex items-center justify-center overflow-hidden" style="background-color: #e8dcc8;">
+                    <svg class="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="400" height="300" fill="#f5e6d3" />
+                      <rect x="120" y="120" width="160" height="100" fill="#d4c5a9" rx="5" />
+                      <rect x="145" y="145" width="25" height="30" fill="#5a4a3a" />
+                      <rect x="185" y="145" width="25" height="30" fill="#5a4a3a" />
+                      <rect x="225" y="145" width="25" height="30" fill="#5a4a3a" />
+                      <rect x="152" y="152" width="10" height="15" fill="#b8d4e8" opacity="0.7" />
+                      <rect x="192" y="152" width="10" height="15" fill="#b8d4e8" opacity="0.7" />
+                      <rect x="232" y="152" width="10" height="15" fill="#b8d4e8" opacity="0.7" />
+                      <polygon points="200,95 110,120 290,120" fill="#8b7355" />
+                      <rect x="185" y="190" width="30" height="30" fill="#654321" rx="3" />
+                      <circle cx="200" cy="205" r="2" fill="#d4af37" />
+                      <circle cx="60" cy="180" r="25" fill="#6b8e23" />
+                      <circle cx="75" cy="200" r="20" fill="#7a9e2f" />
+                      <circle cx="50" cy="210" r="15" fill="#8ab83f" />
+                      <circle cx="340" cy="180" r="25" fill="#6b8e23" />
+                      <circle cx="325" cy="200" r="20" fill="#7a9e2f" />
+                      <circle cx="350" cy="210" r="15" fill="#8ab83f" />
+                      <rect x="0" y="235" width="400" height="65" fill="#c4a57b" />
+                      <circle cx="100" cy="255" r="6" fill="#ff6b9d" />
+                      <circle cx="130" cy="260" r="6" fill="#ffeb3b" />
+                      <circle cx="160" cy="255" r="6" fill="#ff6b9d" />
+                      <circle cx="240" cy="255" r="6" fill="#ff6b9d" />
+                      <circle cx="270" cy="260" r="6" fill="#ffeb3b" />
+                      <circle cx="300" cy="255" r="6" fill="#ff6b9d" />
+                      <path d="M 200 85 Q 190 75 195 65 Q 200 70 205 65 Q 210 75 200 85" fill="#ffd700" opacity="0.8" />
+                    </svg>
+                  </div>
+                  <div class="p-6" style="background-color: #ffffff;">
+                    <h4 class="font-playfair text-2xl mb-3" style="color: #654321;">El Remedio</h4>
+                    <p style="color: #5d4e37;" class="mb-4">Perfecto si os apetece algo especial. Cocinan súper bien y el sitio es precioso. Plan ideal para una comida tranquila antes o después de la boda.</p>
+                    <p style="color: #5d4e37;" class="text-sm">📍 Barrio Liandres s/n, Cantabria</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-12 p-8 rounded-lg shadow-lg wood-texture max-w-2xl mx-auto" style="background-color: #ffffff; border: 2px solid #d4c5a9;">
+                <h3 class="font-playfair text-2xl mb-4 text-center" style="color: #654321;">💡 Nuestro Consejo</h3>
+                <p style="color: #5d4e37;" class="text-center">En temporada alta, mejor reservar. Y si dudáis, preguntadnos: ¡estaremos encantados de ayudaros a elegir! 😊</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- GIFTS PAGE -->
+        <div id="gifts">
+          <section class="py-20 w-full min-h-screen" style="background-color: #f5f1e8;">
+            <div class="max-w-3xl mx-auto px-4">
+              <h2 id="gifts-title" class="font-playfair text-5xl text-center mb-16 leaf-decoration inline-block w-full" style="color: #654321;">Lista de Regalos</h2>
+              <div class="p-10 rounded-lg shadow-xl wood-texture mb-8" style="background-color: #ffffff; border: 3px solid #d4c5a9;">
+                <div class="text-center mb-8">
+                  <svg class="w-20 h-20 mx-auto mb-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="35" width="60" height="45" fill="#8b7355" rx="2" />
+                    <rect x="15" y="30" width="70" height="10" fill="#654321" rx="1" />
+                    <path d="M50,10 L50,35" stroke="#654321" stroke-width="4" stroke-linecap="round" />
+                    <path d="M35,20 Q50,5 65,20" stroke="#654321" stroke-width="4" fill="none" stroke-linecap="round" />
+                    <path d="M35,20 Q50,30 65,20" stroke="#654321" stroke-width="4" fill="none" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <p id="gift-message" class="text-lg text-center mb-8 leading-relaxed" style="color: #5d4e37;">Estamos planeando un viaje de novios único... ¡Vuestro regalo nos ayudará a vivir esta aventura!</p>
+                <div class="p-6 rounded-lg mb-6" style="background-color: #faf8f3; border: 2px solid #d4c5a9;">
+                  <h3 class="font-playfair text-xl mb-4 text-center" style="color: #654321;">Número de Cuenta</h3>
+                  <p id="account-number" class="text-center font-mono text-lg font-semibold mb-2" style="color: #5d4e37;">IBAN: ES36 1583 0001 1391 4708 6870</p>
+                  <p class="text-center text-sm" style="color: #8b7355;">nuki y chuchi</p>
+                </div>
+                <div class="text-center">
+                  <button id="copy-account" class="px-6 py-3 text-white font-semibold rounded-sm transition-all hover:scale-105" style="background-color: #8b6f47;"> 📋 Copiar Número de Cuenta </button>
+                  <p id="copy-success" class="hidden mt-4 text-sm font-semibold" style="color: #8b6f47;">✓ ¡Copiado al portapapeles!</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- RSVP PAGE -->
+        <div id="rsvp">
+          <section class="py-20 w-full min-h-screen" style="background-color: #ffffff;">
+            <div class="max-w-2xl mx-auto px-4">
+              <h2 class="font-playfair text-5xl text-center mb-12 leaf-decoration inline-block w-full rsvp-title" style="color: #654321;">Confirma tu Asistencia</h2>
+              <div class="p-10 rounded-lg shadow-xl wood-texture" style="background-color: #faf8f3; border: 3px solid #d4c5a9;">
+                <p class="text-center mb-8" style="color: #5d4e37;">Por favor, confirma tu asistencia antes del <strong class="rsvp-deadline">1 de Mayo, 2026</strong></p>
+                <form id="rsvp-form" class="space-y-6">
+                  <div>
+                    <label for="guest-name" class="block mb-2 font-semibold" style="color: #654321;">Nombre y apellidos *</label>
+                    <input type="text" id="guest-name" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="Tu nombre completo">
+                  </div>
+                  <div>
+                    <label for="guest-email" class="block mb-2 font-semibold" style="color: #654321;">Email *</label>
+                    <input type="email" id="guest-email" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="tu@email.com">
+                  </div>
+                  <div>
+                    <label for="guest-phone" class="block mb-2 font-semibold" style="color: #654321;">Teléfono *</label>
+                    <input type="tel" id="guest-phone" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="+34 600 000 000">
+                  </div>
+                  <div>
+                    <label for="guest-address" class="block mb-2 font-semibold" style="color: #654321;">Dirección del invitado *</label>
+                    <textarea id="guest-address" rows="2" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors resize-none" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="Calle, número, código postal, ciudad"></textarea>
+                  </div>
+                  <div>
+                    <label for="guest-attending" class="block mb-2 font-semibold" style="color: #654321;">¿Asistirás? *</label>
+                    <select id="guest-attending" required class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;">
+                      <option value="">Selecciona una opción</option>
+                      <option value="yes">Sí</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div id="additional-fields" class="hidden space-y-6">
+                    <div>
+                      <label for="with-companion" class="block mb-2 font-semibold" style="color: #654321;">¿Vendrás con acompañante? *</label>
+                      <select id="with-companion" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                    <div id="companion-name-container" class="hidden">
+                      <label for="companion-name" class="block mb-2 font-semibold" style="color: #654321;">Nombre y apellidos del acompañante *</label>
+                      <input type="text" id="companion-name" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="Nombre completo del acompañante">
+                    </div>
+                    <div>
+                      <label for="pre-wedding" class="block mb-2 font-semibold" style="color: #654321;">¿Vienes a la preboda? *</label>
+                      <select id="pre-wedding" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="accommodation-location" class="block mb-2 font-semibold" style="color: #654321;">¿Dónde os alojaréis? *</label>
+                      <select id="accommodation-location" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="comillas">Comillas</option>
+                        <option value="san-vicente">San Vicente</option>
+                        <option value="other">Otro</option>
+                      </select>
+                    </div>
+                    <div id="accommodation-other-container" class="hidden">
+                      <label for="accommodation-other" class="block mb-2 font-semibold" style="color: #654321;">Especifica dónde *</label>
+                      <input type="text" id="accommodation-other" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="Indica el lugar de alojamiento">
+                    </div>
+                    <div>
+                      <label for="dietary-requirements" class="block mb-2 font-semibold" style="color: #654321;">Intolerancias / alergias / preferencias</label>
+                      <textarea id="dietary-requirements" rows="3" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors resize-none" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="Vegetariano, celíaco, alérgico a..."></textarea>
+                    </div>
+                    <div>
+                      <label for="transport-needed" class="block mb-2 font-semibold" style="color: #654321;">¿Necesitas transporte (autobús) el día de la boda de la iglesia a la finca/de la finca a San Vicente/Comillas? *</label>
+                      <select id="transport-needed" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors" style="border-color: #d4c5a9; background-color: #ffffff;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="guest-message" class="block mb-2 font-semibold" style="color: #654321;">Mensaje para los novios (opcional)</label>
+                    <textarea id="guest-message" rows="4" class="w-full px-4 py-3 rounded border-2 focus:outline-none focus:border-amber-700 transition-colors resize-none" style="border-color: #d4c5a9; background-color: #ffffff;" placeholder="Déjanos un mensaje..."></textarea>
+                  </div>
+                  <button type="submit" class="w-full py-4 text-white font-semibold rounded-sm transition-all duration-300 hover:scale-105" style="background-color: #8b6f47;"> Enviar Confirmación </button>
+                </form>
+                <div id="success-message" class="hidden mt-6 p-6 rounded text-center" style="background-color: #d4edda; color: #155724; border: 2px solid #c3e6cb;">
+                  <div class="text-4xl mb-3">✓</div>
+                  <p class="text-lg font-semibold mb-2">¡Gracias por confirmar!</p>
+                  <p>Nos vemos en la boda 🌿</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="py-8 text-center w-full" style="background-color: #faf8f3; border-top: 2px solid #d4c5a9;">
+        <div class="mb-4">
+          <svg class="w-12 h-12 mx-auto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,30 Q40,20 30,25 Q20,30 25,40 Q30,50 50,70 Q70,50 75,40 Q80,30 70,25 Q60,20 50,30 Z" fill="#8b7355" opacity="0.7" />
+          </svg>
+        </div>
+        <p id="footer-text" class="font-playfair text-xl mb-1" style="color: #654321;">¡Nos vemos pronto!</p>
+        <p class="text-sm" style="color: #8b7355;">Cantabria, 2026</p>
+      </footer>
+    </div>
+
+    <script>
+      const defaultConfig = {
+        bride_name: "nuki",
+        groom_name: "chuchi",
+        wedding_date: "18 de Julio, 2026",
+        venue_name: "Iglesia Santa María de los Ángeles",
+        venue_address: "San Vicente de la Barquera, Cantabria",
+        ceremony_time: "12:00h",
+        story_title: "¿Por qué San Vicente de la Barquera?",
+        story_text: 'San Vicente es un lugar muy especial para nosotros.\n\nPara Nuki, porque aquí empiezan sus raíces: su bisabuela nació en este pueblo y cada rincón guarda una historia familiar. Creció escuchándolas, y San Vicente siempre ha sido parte de quién es.\n\nPara Chuchi, que llegó sin conocer el norte, San Vicente fue un descubrimiento que llegó de la mano de Nuki. Con los años, él también ha ido creando su propio vínculo con este lugar: sus playas, sus "praos", sus restaurantes, sus fiestas… y, sobre todo, su gente.\n\nPor eso queríamos casarnos aquí: porque es un sitio lleno de significado para los dos, donde queremos seguir sumando momentos, historias y recuerdos. Y estamos seguros de que, a los que aún no habéis caído rendidos a su encanto, San Vicente también os robará un trocito de corazón.',
+        itinerary_title: "Itinerario del Día",
+        ceremony_title: "🌸 Ceremonia",
+        ceremony_description: "Recomendamos aparcar en el CEIP Mata Linares (~400 m)",
+        cocktail_time: "13:30h",
+        cocktail_title: "🎊 Celebración",
+        cocktail_description: "Finca Casería de la Mar. Habrá transporte de vuelta a Comillas/San Vicente.",
+        dinner_time: "01:00h",
+        dinner_title: "🚌 Transporte de Vuelta",
+        dinner_description: "Habrá transporte de vuelta desde la finca a Comillas/San Vicente.",
+        dance_time: "",
+        dance_title: "",
+        dance_description: "",
+        party_time: "01:30h",
+        party_title: "🎉 Fiestas de Comillas",
+        party_description: "Los que aún tengan energía... pueden pasarse por las fiestas de Comillas!",
+        accommodation_title: "Alojamiento",
+        accommodation_intro: "Hemos seleccionado algunos hoteles recomendados en la zona. Todos están cerca de la finca y ofrecen el encanto tradicional cántabro.",
+        accommodation_tip: "Te recomendamos reservar con antelación, especialmente si vienes en temporada alta. ¡Santillana del Mar es un destino muy popular!",
+        gifts_title: "Lista de Regalos",
+        account_number: "IBAN: ES36 1583 0001 1391 4708 6870",
+        gift_message: "Estamos planeando un viaje de novios único... ¡Vuestro regalo nos ayudará a vivir esta aventura!",
+        honeymoon_title: "Nuestra Luna de Miel",
+        honeymoon_description: "Planeamos un viaje por el norte de España visitando pueblos con encanto, disfrutando de la gastronomía local y creando recuerdos inolvidables. ¡Vuestro regalo nos ayudará a vivir esta aventura!",
+        rsvp_title: "Confirma tu Asistencia",
+        rsvp_deadline: "1 de Mayo, 2026",
+        footer_text: "¡Nos vemos pronto!",
+        background_color: "#f5f1e8",
+        surface_color: "#ffffff",
+        text_color: "#654321",
+        primary_action_color: "#8b6f47",
+        secondary_action_color: "#8b7355",
+        font_family: "AC Real Adult",
+        font_size: 16
+      };
+
+      async function onConfigChange(config) {
+        const namesEl = document.getElementById('names');
+        const dateEl = document.getElementById('date');
+        const venueNameEls = document.querySelectorAll('#venue-name');
+        const venueAddressEls = document.querySelectorAll('#venue-address');
+        const ceremonyTimeEls = document.querySelectorAll('#ceremony-time-display');
+        const storyTitleEl = document.getElementById('story-title');
+        const accountNumberEl = document.getElementById('account-number');
+        const giftMessageEl = document.getElementById('gift-message');
+        const footerTextEl = document.getElementById('footer-text');
+
+        if (namesEl) {
+          namesEl.textContent = `${config.bride_name || defaultConfig.bride_name} y ${config.groom_name || defaultConfig.groom_name}`;
+        }
+        if (dateEl) dateEl.textContent = config.wedding_date || defaultConfig.wedding_date;
+        venueNameEls.forEach(el => el.textContent = config.venue_name || defaultConfig.venue_name);
+        venueAddressEls.forEach(el => el.textContent = config.venue_address || defaultConfig.venue_address);
+        ceremonyTimeEls.forEach(el => el.textContent = config.ceremony_time || defaultConfig.ceremony_time);
+        if (storyTitleEl) storyTitleEl.textContent = config.story_title || defaultConfig.story_title;
+        if (accountNumberEl) accountNumberEl.textContent = config.account_number || defaultConfig.account_number;
+        if (giftMessageEl) giftMessageEl.textContent = config.gift_message || defaultConfig.gift_message;
+        if (footerTextEl) footerTextEl.textContent = config.footer_text || defaultConfig.footer_text;
+
+        const itineraryTitleEl = document.getElementById('itinerary-title');
+        const ceremonyTitleEl = document.getElementById('ceremony-title');
+        const ceremonyDescEl = document.getElementById('ceremony-desc');
+        const cocktailTimeEl = document.getElementById('cocktail-time');
+        const cocktailTitleEl = document.getElementById('cocktail-title');
+        const cocktailDescEl = document.getElementById('cocktail-desc');
+        const dinnerTimeEl = document.getElementById('dinner-time');
+        const dinnerTitleEl = document.getElementById('dinner-title');
+        const dinnerDescEl = document.getElementById('dinner-desc');
+        const partyTimeEl = document.getElementById('party-time');
+        const partyTitleEl = document.getElementById('party-title');
+        const partyDescEl = document.getElementById('party-desc');
+        const accommodationTitleEl = document.getElementById('accommodation-title');
+        const accommodationIntroEl = document.getElementById('accommodation-intro');
+        const accommodationTipEl = document.getElementById('accommodation-tip');
+        const giftsTitleEl = document.getElementById('gifts-title');
+        const honeymoonTitleEl = document.getElementById('honeymoon-title');
+        const honeymoonDescEl = document.getElementById('honeymoon-desc');
+        const rsvpTitleEls = document.querySelectorAll('.rsvp-title');
+        const rsvpDeadlineEls = document.querySelectorAll('.rsvp-deadline');
+
+        if (itineraryTitleEl) itineraryTitleEl.textContent = config.itinerary_title || defaultConfig.itinerary_title;
+        if (ceremonyTitleEl) ceremonyTitleEl.textContent = config.ceremony_title || defaultConfig.ceremony_title;
+        if (ceremonyDescEl) ceremonyDescEl.textContent = config.ceremony_description || defaultConfig.ceremony_description;
+        if (cocktailTimeEl) cocktailTimeEl.textContent = config.cocktail_time || defaultConfig.cocktail_time;
+        if (cocktailTitleEl) cocktailTitleEl.textContent = config.cocktail_title || defaultConfig.cocktail_title;
+        if (cocktailDescEl) cocktailDescEl.textContent = config.cocktail_description || defaultConfig.cocktail_description;
+        if (dinnerTimeEl) dinnerTimeEl.textContent = config.dinner_time || defaultConfig.dinner_time;
+        if (dinnerTitleEl) dinnerTitleEl.textContent = config.dinner_title || defaultConfig.dinner_title;
+        if (dinnerDescEl) dinnerDescEl.textContent = config.dinner_description || defaultConfig.dinner_description;
+        if (partyTimeEl) partyTimeEl.textContent = config.party_time || defaultConfig.party_time;
+        if (partyTitleEl) partyTitleEl.textContent = config.party_title || defaultConfig.party_title;
+        if (partyDescEl) partyDescEl.textContent = config.party_description || defaultConfig.party_description;
+        if (accommodationTitleEl) accommodationTitleEl.textContent = config.accommodation_title || defaultConfig.accommodation_title;
+        if (accommodationIntroEl) accommodationIntroEl.textContent = config.accommodation_intro || defaultConfig.accommodation_intro;
+        if (accommodationTipEl) accommodationTipEl.textContent = config.accommodation_tip || defaultConfig.accommodation_tip;
+        if (giftsTitleEl) giftsTitleEl.textContent = config.gifts_title || defaultConfig.gifts_title;
+        if (honeymoonTitleEl) honeymoonTitleEl.textContent = config.honeymoon_title || defaultConfig.honeymoon_title;
+        if (honeymoonDescEl) honeymoonDescEl.textContent = config.honeymoon_description || defaultConfig.honeymoon_description;
+        rsvpTitleEls.forEach(el => el.textContent = config.rsvp_title || defaultConfig.rsvp_title);
+        rsvpDeadlineEls.forEach(el => el.textContent = config.rsvp_deadline || defaultConfig.rsvp_deadline);
+
+        // Update story text with proper paragraph formatting
+        const storyTextEl = document.getElementById('story-text');
+        if (storyTextEl) {
+          const storyText = config.story_text || defaultConfig.story_text;
+          const paragraphs = storyText.split('\n\n');
+          storyTextEl.innerHTML = paragraphs.map(p => `<p class="mb-4">${p}</p>`).join('');
+          // Remove margin from last paragraph
+          const lastP = storyTextEl.querySelector('p:last-child');
+          if (lastP) lastP.classList.remove('mb-4');
+        }
+
+        const backgroundColor = config.background_color || defaultConfig.background_color;
+        const surfaceColor = config.surface_color || defaultConfig.surface_color;
+        const textColor = config.text_color || defaultConfig.text_color;
+        const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+        const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+        document.querySelectorAll('[style*="background-color: #f5f1e8"], [style*="background-color:#f5f1e8"]').forEach(el => {
+          el.style.backgroundColor = backgroundColor;
+        });
+
+        document.querySelectorAll('[style*="background-color: #ffffff"], [style*="background-color:#ffffff"]').forEach(el => {
+          el.style.backgroundColor = surfaceColor;
+        });
+
+        document.querySelectorAll('[style*="background-color: #faf8f3"], [style*="background-color:#faf8f3"]').forEach(el => {
+          const newColor = el.closest('.wood-texture') ? '#ffffff' : surfaceColor;
+          el.style.backgroundColor = backgroundColor;
+        });
+
+        document.querySelectorAll('[style*="color: #654321"], [style*="color:#654321"]').forEach(el => {
+          el.style.color = textColor;
+        });
+
+        document.querySelectorAll('[style*="background-color: #8b6f47"], [style*="background-color:#8b6f47"]').forEach(el => {
+          el.style.backgroundColor = primaryActionColor;
+        });
+
+        document.querySelectorAll('[style*="color: #8b7355"], [style*="color:#8b7355"], [style*="fill: #8b7355"], [style*="fill:#8b7355"], [style*="background-color: #8b7355"], [style*="background-color:#8b7355"]').forEach(el => {
+          if (el.style.color && el.style.color.includes('8b7355')) {
+            el.style.color = secondaryActionColor;
+          }
+          if (el.hasAttribute('fill')) {
+            el.setAttribute('fill', secondaryActionColor);
+          }
+          if (el.style.backgroundColor && el.style.backgroundColor.includes('8b7355')) {
+            el.style.backgroundColor = secondaryActionColor;
+          }
+        });
+
+        const customFont = config.font_family || defaultConfig.font_family;
+        const baseFontStack = `'AC Real Adult', cursive`;
+
+        document.querySelectorAll('body, h1, h2, h3, h4, h5, h6, p, a, button, label, input, textarea, select, span, div, li, td, th').forEach(el => {
+          el.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        });
+
+        const baseSize = config.font_size || defaultConfig.font_size;
+
+        document.querySelectorAll('h1').forEach(el => {
+          el.style.fontSize = `${baseSize * 4}px`;
+        });
+
+        document.querySelectorAll('h2').forEach(el => {
+          el.style.fontSize = `${baseSize * 2.5}px`;
+        });
+
+        document.querySelectorAll('h3').forEach(el => {
+          el.style.fontSize = `${baseSize * 1.5}px`;
+        });
+
+        document.querySelectorAll('h4').forEach(el => {
+          el.style.fontSize = `${baseSize * 1.25}px`;
+        });
+
+        document.querySelectorAll('#date').forEach(el => {
+          el.style.fontSize = `${baseSize * 1.5}px`;
+        });
+
+        document.querySelectorAll('p, input, textarea, select, button, label, a, span, div, li').forEach(el => {
+          if (!el.closest('h1, h2, h3, h4, h5, h6')) {
+            el.style.fontSize = `${baseSize}px`;
+          }
+        });
+      }
+
+      function setupForms() {
+        // RSVP Form handling - Home page
+        const attendingSelectHome = document.getElementById('guest-attending-home');
+        const additionalFieldsHome = document.getElementById('additional-fields-home');
+        const withCompanionHome = document.getElementById('with-companion-home');
+        const companionNameContainerHome = document.getElementById('companion-name-container-home');
+        const accommodationLocationHome = document.getElementById('accommodation-location-home');
+        const accommodationOtherContainerHome = document.getElementById('accommodation-other-container-home');
+
+        if (attendingSelectHome) {
+          attendingSelectHome.addEventListener('change', function () {
+            if (this.value === 'yes') {
+              additionalFieldsHome.classList.remove('hidden');
+              withCompanionHome.required = true;
+              document.getElementById('pre-wedding-home').required = true;
+              accommodationLocationHome.required = true;
+              document.getElementById('transport-needed-home').required = true;
+            } else {
+              additionalFieldsHome.classList.add('hidden');
+              companionNameContainerHome.classList.add('hidden');
+              accommodationOtherContainerHome.classList.add('hidden');
+              withCompanionHome.required = false;
+              document.getElementById('companion-name-home').required = false;
+              document.getElementById('pre-wedding-home').required = false;
+              accommodationLocationHome.required = false;
+              document.getElementById('accommodation-other-home').required = false;
+              document.getElementById('transport-needed-home').required = false;
+            }
+          });
+        }
+
+        if (withCompanionHome) {
+          withCompanionHome.addEventListener('change', function () {
+            if (this.value === 'yes') {
+              companionNameContainerHome.classList.remove('hidden');
+              document.getElementById('companion-name-home').required = true;
+            } else {
+              companionNameContainerHome.classList.add('hidden');
+              document.getElementById('companion-name-home').required = false;
+            }
+          });
+        }
+
+        if (accommodationLocationHome) {
+          accommodationLocationHome.addEventListener('change', function () {
+            if (this.value === 'other') {
+              accommodationOtherContainerHome.classList.remove('hidden');
+              document.getElementById('accommodation-other-home').required = true;
+            } else {
+              accommodationOtherContainerHome.classList.add('hidden');
+              document.getElementById('accommodation-other-home').required = false;
+            }
+          });
+        }
+
+        const rsvpFormHome = document.getElementById('rsvp-form-home');
+        if (rsvpFormHome) {
+          rsvpFormHome.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            this.style.display = 'none';
+            document.getElementById('success-message-home').classList.remove('hidden');
+
+            setTimeout(() => {
+              this.style.display = 'block';
+              document.getElementById('success-message-home').classList.add('hidden');
+              this.reset();
+              additionalFieldsHome.classList.add('hidden');
+              companionNameContainerHome.classList.add('hidden');
+              accommodationOtherContainerHome.classList.add('hidden');
+            }, 4000);
+          });
+        }
+
+        // RSVP Form handling - RSVP page
+        const attendingSelect = document.getElementById('guest-attending');
+        const additionalFields = document.getElementById('additional-fields');
+        const withCompanion = document.getElementById('with-companion');
+        const companionNameContainer = document.getElementById('companion-name-container');
+        const accommodationLocation = document.getElementById('accommodation-location');
+        const accommodationOtherContainer = document.getElementById('accommodation-other-container');
+
+        if (attendingSelect) {
+          attendingSelect.addEventListener('change', function () {
+            if (this.value === 'yes') {
+              additionalFields.classList.remove('hidden');
+              withCompanion.required = true;
+              document.getElementById('pre-wedding').required = true;
+              accommodationLocation.required = true;
+              document.getElementById('transport-needed').required = true;
+            } else {
+              additionalFields.classList.add('hidden');
+              companionNameContainer.classList.add('hidden');
+              accommodationOtherContainer.classList.add('hidden');
+              withCompanion.required = false;
+              document.getElementById('companion-name').required = false;
+              document.getElementById('pre-wedding').required = false;
+              accommodationLocation.required = false;
+              document.getElementById('accommodation-other').required = false;
+              document.getElementById('transport-needed').required = false;
+            }
+          });
+        }
+
+        if (withCompanion) {
+          withCompanion.addEventListener('change', function () {
+            if (this.value === 'yes') {
+              companionNameContainer.classList.remove('hidden');
+              document.getElementById('companion-name').required = true;
+            } else {
+              companionNameContainer.classList.add('hidden');
+              document.getElementById('companion-name').required = false;
+            }
+          });
+        }
+
+        if (accommodationLocation) {
+          accommodationLocation.addEventListener('change', function () {
+            if (this.value === 'other') {
+              accommodationOtherContainer.classList.remove('hidden');
+              document.getElementById('accommodation-other').required = true;
+            } else {
+              accommodationOtherContainer.classList.add('hidden');
+              document.getElementById('accommodation-other').required = false;
+            }
+          });
+        }
+
+        const rsvpForm = document.getElementById('rsvp-form');
+        if (rsvpForm) {
+          rsvpForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            this.style.display = 'none';
+            document.getElementById('success-message').classList.remove('hidden');
+
+            setTimeout(() => {
+              this.style.display = 'block';
+              document.getElementById('success-message').classList.add('hidden');
+              this.reset();
+              additionalFields.classList.add('hidden');
+              companionNameContainer.classList.add('hidden');
+              accommodationOtherContainer.classList.add('hidden');
+            }, 4000);
+          });
+        }
+
+        // Copy account number
+        const copyButton = document.getElementById('copy-account');
+        if (copyButton) {
+          copyButton.addEventListener('click', function () {
+            const accountNumber = document.getElementById('account-number').textContent;
+            navigator.clipboard.writeText(accountNumber).then(() => {
+              const successMsg = document.getElementById('copy-success');
+              successMsg.classList.remove('hidden');
+              setTimeout(() => {
+                successMsg.classList.add('hidden');
+              }, 3000);
+            });
+          });
+        }
+      }
+
+      // Init outside de Coda: al cargar el DOM
+      document.addEventListener('DOMContentLoaded', () => {
+        onConfigChange(defaultConfig);
+        setupForms();
+      });
+    </script>
+  </body>
+</html>
