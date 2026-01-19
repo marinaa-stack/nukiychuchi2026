@@ -112,56 +112,76 @@
         );
       }
 
-      /* =========================
-         MOBILE FIXES
-         ========================= */
-      @media (max-width: 768px) {
-        /* Disable leaf decorations (caused horizontal scroll) */
-        .leaf-decoration::before,
-        .leaf-decoration::after {
-          display: none;
-        }
+/* =========================
+   FOOTER + MOBILE FIXES
+   ========================= */
 
-        nav {
-          padding: 0.4rem 0.5rem !important;
-          width: 100%;
-        }
+/* Desktop footer: slightly shorter */
+footer {
+  padding-top: 1.25rem;   /* was py-8 (2rem) */
+  padding-bottom: 1.25rem;
+}
 
-        nav > div {
-          gap: 0.35rem;
-        }
+footer svg {
+  width: 2.75rem;
+  height: 2.75rem;
+}
 
-        .nav-link {
-          padding: 0.35rem 0.7rem;
-          font-size: 0.8rem;
-        }
+footer p#footer-text {
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+}
 
-        /* Compact footer */
-        footer {
-          padding-top: 0.75rem !important;
-          padding-bottom: 0.75rem !important;
-        }
+/* MOBILE */
+@media (max-width: 768px) {
+  /* Disable leaf decorations (caused horizontal scroll) */
+  .leaf-decoration::before,
+  .leaf-decoration::after {
+    display: none;
+  }
 
-        footer svg {
-          width: 2rem;
-          height: 2rem;
-          margin-bottom: 0.25rem !important;
-        }
+  nav {
+    padding: 0.35rem 0.4rem !important;
+    width: 100%;
+  }
 
-        footer p#footer-text {
-          font-size: 0.95rem;
-          margin-bottom: 0.1rem !important;
-        }
+  nav > div {
+    gap: 0.3rem;
+  }
 
-        footer p {
-          line-height: 1.3;
-        }
+  .nav-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
 
-        /* Images behave better on small screens */
-        img.w-2\/3 {
-          width: 100%;
-        }
-      }
+  /* Extra-compact footer on mobile */
+  footer {
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+
+  footer svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-bottom: 0.1rem !important;
+  }
+
+  footer p#footer-text {
+    font-size: 0.85rem;
+    margin-bottom: 0 !important;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+
+  /* Images behave better on small screens */
+  img.w-2\/3 {
+    width: 100%;
+  }
+}
+
     </style>
   </head>
 
