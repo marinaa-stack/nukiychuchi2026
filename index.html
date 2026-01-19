@@ -15,27 +15,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-      /*
-        IMÁGENES ESPERADAS EN LA MISMA CARPETA QUE index.html
-
-        home.jpg                 → Imagen grande de portada (hero)
-        anillo.jpg               → Imagen en la sección "¿Por qué San Vicente...?"
-
-        1.jpg  - 4.jpg           → Hoteles en San Vicente
-        5.jpg  - 7.jpg           → Hoteles en los alrededores
-        8.jpg  - 15.jpg          → Restaurantes recomendaciones
-
-        tardeo.jpg               → Preboda - Tardeo de Bienvenida
-        iglesia.jpg              → Ceremonia
-        finca.jpg                → Celebración
-        comillas.jpg             → Fiestas de Comillas
-      */
-
       html,
       body {
         margin: 0;
         padding: 0;
         width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+      }
+
+      * {
+        min-width: 0;
         box-sizing: border-box;
       }
 
@@ -103,7 +94,6 @@
         transform: translateY(-2px);
       }
 
-      /* Hero con imagen de fondo */
       .hero-bg {
         background-image: url("home.jpg");
         background-size: cover;
@@ -122,30 +112,18 @@
         );
       }
 
-      @view-transition {
-        navigation: auto;
-      }
-
-      /* Ajustes móviles (barra de menú y footer más estrechos y compactos) */
+      /* =========================
+         MOBILE FIXES
+         ========================= */
       @media (max-width: 768px) {
+        /* Disable leaf decorations (caused horizontal scroll) */
         .leaf-decoration::before,
         .leaf-decoration::after {
-          font-size: 1.5rem;
-        }
-
-        .leaf-decoration::before {
-          left: -2rem;
-        }
-
-        .leaf-decoration::after {
-          right: -2rem;
+          display: none;
         }
 
         nav {
-          padding-top: 0.4rem !important;
-          padding-bottom: 0.4rem !important;
-          padding-left: 0.5rem !important;
-          padding-right: 0.5rem !important;
+          padding: 0.4rem 0.5rem !important;
           width: 100%;
         }
 
@@ -158,25 +136,40 @@
           font-size: 0.8rem;
         }
 
+        /* Compact footer */
         footer {
-          padding-top: 0.6rem !important;
-          padding-bottom: 0.6rem !important;
-          width: 100%;
+          padding-top: 0.75rem !important;
+          padding-bottom: 0.75rem !important;
         }
 
         footer svg {
-          width: 2.5rem;
-          height: 2.5rem;
+          width: 2rem;
+          height: 2rem;
+          margin-bottom: 0.25rem !important;
+        }
+
+        footer p#footer-text {
+          font-size: 0.95rem;
+          margin-bottom: 0.1rem !important;
         }
 
         footer p {
-          margin-bottom: 0.15rem;
+          line-height: 1.3;
+        }
+
+        /* Images behave better on small screens */
+        img.w-2\/3 {
+          width: 100%;
         }
       }
     </style>
   </head>
+
   <body class="h-full">
     <div id="app" class="w-full h-full flex flex-col">
+      <!-- EVERYTHING BELOW IS UNCHANGED CONTENT -->
+      <!-- Your existing body content remains exactly the same -->
+
       <!-- Navigation -->
       <nav
         class="w-full py-4 px-4 shadow-md wood-texture sticky top-0 z-50"
