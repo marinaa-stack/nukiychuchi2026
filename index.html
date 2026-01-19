@@ -181,6 +181,64 @@ footer p#footer-text {
     width: 100%;
   }
 }
+      /* =========================
+   FOOTER HEIGHT FIX (FINAL)
+   ========================= */
+
+/* Desktop: ~40% lower height */
+footer {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+/* Reduce inner spacing */
+footer > div {
+  margin-bottom: 0.25rem !important;
+}
+
+footer svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+footer p#footer-text {
+  font-size: 0.95rem;
+  margin-bottom: 0 !important;
+}
+
+footer p {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+/* =========================
+   MOBILE: ULTRA COMPACT
+   ========================= */
+@media (max-width: 768px) {
+  footer {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+  }
+
+  footer > div {
+    margin-bottom: 0.1rem !important;
+  }
+
+  footer svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  footer p#footer-text {
+    font-size: 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.65rem;
+    line-height: 1.1;
+  }
+}
+
 
     </style>
   </head>
